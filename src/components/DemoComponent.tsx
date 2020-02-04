@@ -1,26 +1,31 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import ErrorBoundary from 'react-error-boundary'
-const { Text } = require('@theme-ui/components') // type wip https://git.io/JeQGL
-
-const myErrorHandler = (error: Error, componentStack: string) => {
-  console.log({ error, componentStack }) // eslint-disable-line
-  // Do something with the error
-  // E.g. log to an error logging client here
-}
+import { useTranslation } from 'react-i18next'
+import { Text, Button } from '@theme-ui/components'
 
 export default function DemoComponent() {
+  const { t } = useTranslation(['demo'])
+  const { i18n } = useTranslation()
+
+  const handlerChangeLang = (e: Event) => {
+    e.preventDefault()
+    i18n.changeLanguage('es')
+  }
+
   return (
-    <ErrorBoundary onError={myErrorHandler}>
+    <div>
+      <h3>{t('demo:hello')}</h3>
       <Text
         sx={{
-          fontSize: 4,
-          fontWeight: 'bold',
+          fontSize: 2,
           color: 'secondary',
         }}
       >
-        I'm ThemeUI Text component in the DemoComponent
+        {t('description')}
       </Text>
-    </ErrorBoundary>
+      <Button onClick={handlerChangeLang} bg="purple">
+        Español
+      </Button>
+    </div>
   )
 }
