@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider } from 'theme-ui'
-import theme from 'theme'
+import { theme } from 'theme'
 
 import { TransitProvider } from '@blockmatic/eosio-hooks'
 import { transitConfig } from 'config/transit'
@@ -11,10 +11,10 @@ import i18n from 'config/i18n'
 
 export default function AppProvider({ children }: OneOrMoreChildren) {
   return (
-    <I18nextProvider i18n={i18n}>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <I18nextProvider i18n={i18n}>
         <TransitProvider config={transitConfig}>{children}</TransitProvider>
-      </ThemeProvider>
-    </I18nextProvider>
+      </I18nextProvider>
+    </ThemeProvider>
   )
 }

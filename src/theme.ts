@@ -1,8 +1,23 @@
-export default {
+// example base theme from @theme-ui/presets
+export const theme = {
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'text',
+      },
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
+  breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: 'Georgia',
-    heading: 'Open Sans',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -16,12 +31,18 @@ export default {
     heading: 1.125,
   },
   colors: {
-    text: '#404041',
+    text: '#000',
     background: '#fff',
-    primary: '#6c2d8d',
-    secondary: '#30c',
+    primary: '#07c',
+    secondary: '#f03',
     muted: '#f6f6f6',
-    heading: '#6c2d8d',
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+    },
   },
   styles: {
     root: {
@@ -29,56 +50,30 @@ export default {
       lineHeight: 'body',
       fontWeight: 'body',
     },
+
     h1: {
-      color: 'heading',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 5,
     },
     h2: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 4,
     },
     h3: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 3,
     },
     h4: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 2,
     },
     h5: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 1,
     },
     h6: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      variant: 'text.heading',
       fontSize: 0,
-    },
-    p: {
-      color: 'text',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
-    },
-    a: {
-      color: 'primary',
     },
     pre: {
       fontFamily: 'monospace',
@@ -103,9 +98,6 @@ export default {
     td: {
       textAlign: 'left',
       borderBottomStyle: 'solid',
-    },
-    img: {
-      maxWidth: '100%',
     },
   },
 }
