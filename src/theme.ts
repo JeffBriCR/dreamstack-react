@@ -3,8 +3,9 @@ export const theme = {
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: 'inherit',
+    body: '"Gothic A1" , Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Lato',
+    subheading: 'Poppins',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -18,11 +19,11 @@ export const theme = {
     heading: 1.125,
   },
   colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#f03',
-    muted: '#f6f6f6',
+    text: '#5D5D5D',
+    background: '#FFFFFF',
+    primary: '#7E479B',
+    secondary: '#4E179B',
+    muted: '#F7F8FC',
   },
   text: {
     heading: {
@@ -47,8 +48,9 @@ export const theme = {
       fontSize: 4,
     },
     h3: {
-      variant: 'text.heading',
+      variant: 'text.subheading',
       fontSize: 3,
+      fontWeight: 300,
     },
     h4: {
       variant: 'text.heading',
@@ -63,8 +65,8 @@ export const theme = {
       fontSize: 0,
     },
     pre: {
-      backgroundColor: '#303030',
-      color: '#47f900',
+      backgroundColor: 'muted',
+      color: 'secondary',
       fontFamily: 'monospace',
       overflowX: 'auto',
       code: {
@@ -87,6 +89,15 @@ export const theme = {
     td: {
       textAlign: 'left',
       borderBottomStyle: 'solid',
+    },
+  },
+  images: {
+    quarter: {
+      display: 'block',
+      border: 0,
+      padding: 0,
+      maxWidth: '25%',
+      margin: '0 auto',
     },
   },
 }
