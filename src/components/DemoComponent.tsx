@@ -57,7 +57,13 @@ export default function DemoComponent() {
   return (
     <div>
       <Grid bg="primary" p={2} gap={1} columns={[2, 2, 2]}>
-        <Heading as="h3" color="background">
+        <Heading
+          sx={{
+            fontSize: [0, 0, 1],
+          }}
+          as="h3"
+          color="background"
+        >
           {t('started')}
         </Heading>
         <Flex
@@ -65,12 +71,19 @@ export default function DemoComponent() {
             justifyContent: 'flex-end',
           }}
         >
-          <Button onClick={handlerChangeLang} variant="secondary">
+          <Button
+            sx={{
+              fontSize: [0, 0, 1],
+              padding: [1, 1, 2],
+            }}
+            onClick={handlerChangeLang}
+            variant="secondary"
+          >
             {t('lang')}
           </Button>
         </Flex>
       </Grid>
-      <Grid gap={2} columns={[2, 2, 2]} px={0} py={0}>
+      <Grid gap={2} columns={[1, 2, 2]} px={0} py={0}>
         <div
           sx={{
             display: 'flex',
@@ -91,7 +104,13 @@ export default function DemoComponent() {
             justifyContent: 'center',
           }}
         >
-          <Heading as="h1" color="primary">
+          <Heading
+            sx={{
+              fontSize: [3, 4, 5],
+            }}
+            as="h1"
+            color="primary"
+          >
             {t('telos')}
           </Heading>
         </div>
