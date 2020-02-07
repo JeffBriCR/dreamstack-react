@@ -1,4 +1,5 @@
 export default {
-  hello: 'The TELOS DreamStack',
-  description: 'Jumpstart dApp development following best practices and conventions.',
+  telos: 'TELOS Dreamstack',
+  started: 'React Started',
+  lang: 'Español',
 }

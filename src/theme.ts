@@ -100,4 +100,17 @@ export const theme = {
       margin: '0 auto',
     },
   },
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'text',
+      },
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
 }
