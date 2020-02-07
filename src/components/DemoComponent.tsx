@@ -57,6 +57,7 @@ export default function DemoComponent() {
   return (
     <div>
       <Grid bg="primary" p={2} gap={1} columns={[2, 2, 2]}>
+<<<<<<< HEAD
         <Heading
           sx={{
             fontSize: [0, 0, 1],
@@ -64,6 +65,9 @@ export default function DemoComponent() {
           as="h3"
           color="background"
         >
+=======
+        <Heading as="h3" color="background">
+>>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
           {t('started')}
         </Heading>
         <Flex
@@ -71,6 +75,7 @@ export default function DemoComponent() {
             justifyContent: 'flex-end',
           }}
         >
+<<<<<<< HEAD
           <Button
             sx={{
               fontSize: [0, 0, 1],
@@ -79,11 +84,18 @@ export default function DemoComponent() {
             onClick={handlerChangeLang}
             variant="secondary"
           >
+=======
+          <Button onClick={handlerChangeLang} variant="secondary">
+>>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
             {t('lang')}
           </Button>
         </Flex>
       </Grid>
+<<<<<<< HEAD
       <Grid gap={2} columns={[1, 2, 2]} px={0} py={0}>
+=======
+      <Grid gap={2} columns={[2, 2, 2]} px={0} py={0}>
+>>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
         <div
           sx={{
             display: 'flex',
@@ -104,6 +116,7 @@ export default function DemoComponent() {
             justifyContent: 'center',
           }}
         >
+<<<<<<< HEAD
           <Heading
             sx={{
               fontSize: [3, 4, 5],
@@ -111,6 +124,9 @@ export default function DemoComponent() {
             as="h1"
             color="primary"
           >
+=======
+          <Heading as="h1" color="primary">
+>>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
             {t('telos')}
           </Heading>
         </div>
