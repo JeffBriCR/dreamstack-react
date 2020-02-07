@@ -1,5 +1,5 @@
 export default {
   telos: 'TELOS Dreamstack',
-  started: 'React Started',
+  started: 'React Starter',
   lang: 'Español',
 }

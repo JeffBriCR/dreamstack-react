@@ -56,8 +56,8 @@ export default function DemoComponent() {
   }
   return (
     <div>
-      <Grid bg="primary" p={2} gap={2} columns={[1, null, 2]}>
-        <Heading as="h3" p={3} color="background">
+      <Grid bg="primary" p={2} gap={1} columns={[2, 2, 2]}>
+        <Heading as="h3" color="background">
           {t('started')}
         </Heading>
         <Flex
@@ -65,12 +65,12 @@ export default function DemoComponent() {
             justifyContent: 'flex-end',
           }}
         >
-          <Button onClick={handlerChangeLang} variant="secondary" mx={6}>
+          <Button onClick={handlerChangeLang} variant="secondary">
             {t('lang')}
           </Button>
         </Flex>
       </Grid>
-      <Grid gap={2} columns={[1, 2, 2]} px={0} py={0}>
+      <Grid gap={2} columns={[2, 2, 2]} px={0} py={0}>
         <div
           sx={{
             display: 'flex',

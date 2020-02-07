@@ -42,6 +42,7 @@ export const theme = {
     h1: {
       variant: 'text.heading',
       fontSize: 5,
+      textAlign: 'center',
     },
     h2: {
       variant: 'text.heading',
