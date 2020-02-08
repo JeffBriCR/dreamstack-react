@@ -57,7 +57,6 @@ export default function DemoComponent() {
   return (
     <div>
       <Grid bg="primary" p={2} gap={1} columns={[2, 2, 2]}>
-<<<<<<< HEAD
         <Heading
           sx={{
             fontSize: [0, 0, 1],
@@ -65,9 +64,6 @@ export default function DemoComponent() {
           as="h3"
           color="background"
         >
-=======
-        <Heading as="h3" color="background">
->>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
           {t('started')}
         </Heading>
         <Flex
@@ -75,7 +71,6 @@ export default function DemoComponent() {
             justifyContent: 'flex-end',
           }}
         >
-<<<<<<< HEAD
           <Button
             sx={{
               fontSize: [0, 0, 1],
@@ -84,9 +79,6 @@ export default function DemoComponent() {
             onClick={handlerChangeLang}
             variant="secondary"
           >
-=======
-          <Button onClick={handlerChangeLang} variant="secondary">
->>>>>>> a2f12547cf1eb315c40a7419fe409859ff7b1b40
             {t('lang')}
           </Button>
         </Flex>
