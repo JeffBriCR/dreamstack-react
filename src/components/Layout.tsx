@@ -4,14 +4,25 @@ import { useRef, useState } from 'react'
 import { OneOrMoreChildren } from 'types'
 import { motion } from 'framer-motion'
 import { MenuButton } from '@theme-ui/components'
+import { useBreakpointIndex } from '@theme-ui/match-media'
 
 const sideVariants = {
   open: { width: 280 },
   closed: { width: 40 },
 }
+const topVariants = {
+  open: { height: 150 },
+  closed: { height: 40 },
+}
+const transition = {
+  x: { type: 'spring', stiffness: 400 },
+  opacity: { ease: 'easeIn' },
+}
 export default function Layout({ children }: OneOrMoreChildren) {
   const [isOpen, setOpen] = useState(false)
   const containerRef = useRef(null)
+  const breakPointIndex = useBreakpointIndex()
+
   return (
     <div
       sx={{
@@ -24,7 +35,8 @@ export default function Layout({ children }: OneOrMoreChildren) {
         ref={containerRef}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        variants={sideVariants}
+        transition={transition}
+        variants={breakPointIndex !== 0 ? sideVariants : topVariants}
         sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
