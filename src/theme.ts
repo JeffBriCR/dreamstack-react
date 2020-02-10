@@ -1,6 +1,6 @@
 // example base theme from @theme-ui/presets
 export const theme = {
-  breakpoints: ['40em', '52em', '64em'],
+  breakpoints: ['30em', '40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: '"Gothic A1" , Roboto, "Helvetica Neue", sans-serif',
@@ -24,6 +24,7 @@ export const theme = {
     primary: '#7E479B',
     secondary: '#4E179B',
     muted: '#F7F8FC',
+    dark: '#272C33',
   },
   text: {
     heading: {
@@ -112,6 +113,9 @@ export const theme = {
     secondary: {
       color: 'background',
       bg: 'secondary',
+    },
+    menu: {
+      color: 'background',
     },
   },
 }

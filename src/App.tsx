@@ -1,13 +1,16 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import AppProvider from 'components/AppProvider'
+import Layout from 'components/Layout'
 import Home from 'routes/Home'
 
 function App() {
   return (
     <div>
       <AppProvider>
-        <Home />
+        <Layout>
+          <Home />
+        </Layout>
       </AppProvider>
     </div>
   )
