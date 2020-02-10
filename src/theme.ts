@@ -102,6 +102,18 @@ export const theme = {
       margin: '0 auto',
     },
   },
+  links: {
+    nav: {
+      px: 2,
+      py: 2,
+      color: 'text',
+      transition: 'all 0.5s',
+      '&:hover': {
+        transform: 'scale(1.2)',
+        color: 'background',
+      },
+    },
+  },
   buttons: {
     primary: {
       color: 'background',
@@ -116,6 +128,11 @@ export const theme = {
     },
     menu: {
       color: 'background',
+      cursor: 'pointer',
+    },
+    close: {
+      color: 'background',
+      cursor: 'pointer',
     },
   },
 }
