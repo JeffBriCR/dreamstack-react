@@ -40,7 +40,7 @@ export default function Navbar() {
         flexGrow: 1,
         flexBasis: 'sidebar',
         bg: 'dark',
-        height: ['auto', '100vh'],
+        minHeight: ['auto', '100vh'],
         minWidth: ['100vw', 'auto', 'auto', 'auto'],
       }}
     >

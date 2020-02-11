@@ -3,7 +3,10 @@ import { jsx, Flex } from 'theme-ui'
 import { NavLink } from '@theme-ui/components'
 import { Link } from 'react-router-dom'
 import { MdHome, MdAccountBalanceWallet } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
+
 export default function Navlinks() {
+  const { t } = useTranslation(['navbar'])
   return (
     <Flex
       as="nav"
@@ -14,11 +17,11 @@ export default function Navlinks() {
     >
       <NavLink as={Link} to="/" px={4}>
         <MdHome />
-        Home
+        {t('home')}
       </NavLink>
 
       <NavLink as={Link} to="/wallet" px={4}>
-        <MdAccountBalanceWallet /> Wallet
+        <MdAccountBalanceWallet /> {t('wallet')}
       </NavLink>
     </Flex>
   )

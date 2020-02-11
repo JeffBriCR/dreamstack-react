@@ -7,40 +7,20 @@ import gql from 'graphql-tag'
 
 import logo from 'assets/logo.svg'
 const SUBSCRIPTION = gql`
-  subscription myAccount($account_name: String) {
-    accounts(where: { account_name: { _eq: $account_name } }) {
+  subscription balances {
+    accounts {
       account_name
-      is_proxy
       balances {
         amount
-        contract
         currency
         decimals
-      }
-      rexbal {
-        matured_rex
-        rex_balance
-        rex_maturities
-        vote_stake
-      }
-      permissions {
-        perm_name
-        threshold
-        keys {
-          key
-          weight
-        }
-        accounts {
-          actor
-          weight
-        }
       }
     }
   }
 `
-
+// TODO: move translation button to settings area
 export default function DemoComponent() {
-  const { data } = useSubscription(SUBSCRIPTION, { variables: { account_name: 'dreamstackio' } })
+  const { data } = useSubscription(SUBSCRIPTION)
   const { t } = useTranslation(['demo'])
   const { i18n } = useTranslation()
 
